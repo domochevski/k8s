@@ -18,3 +18,9 @@ spec:
       containers:
       - image: docker.io/bootdotdev/synergychat-web:latest
         name: synergychat-web
+        env:
+          - name: API_URL
+            valueFrom:
+              configMapKeyRef:
+                name: synergychat-web-configmap
+                key: API_URL

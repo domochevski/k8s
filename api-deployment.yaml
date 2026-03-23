@@ -23,5 +23,8 @@ spec:
               configMapKeyRef:
                 name: synergychat-api-configmap
                 key: API_PORT
-        
-
+          - name: CRAWLER_BASE_URL
+            valueFrom:
+              configMapKeyRef:
+                name: synergychat-api-configmap
+                key: CRAWLER_BASE_URL
